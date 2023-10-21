@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="static/styles.css">
+  <title>Heloísa Haab</title>
+</head>
+
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <div class="flex-container">
+      <a id="brand-icon" href="#welcome">
+        Heloísa Haab
+      </a>
+    </div>
+    <div class="flex-container dropdown">
+      <button id="dropdown-btn" type="button" aria-label="dropdown-menu"><i class="bi bi-three-dots-vertical"></i></button>
+      <div id="nav-items" class="dropdown-content">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation Buttons -->
+  <div id="nav-buttons">
+    <a id="nav-button-up"><i class="bi bi-arrow-up-square-fill"></i></a>
+    <a id="nav-button-down"><i class="bi bi-arrow-down-square-fill"></i></a>
+  </div>
+  <div class="content-container">
+    <!-- Welcome Section -->
+    <section id="welcome" class="background fade-in">
+      <h1 class="display-title">Welcome.</h1>
+      <p>Welcome to the world of Heloísa, an avid learner, educator, and aspiring psychologist based in
+        Florianópolis, Brazil. With a rich background in Psychology from UNISUL in Santa Catarina, I bring a unique
+        blend of empathy and insight into my role as an educator at a private bilingual school.</p>
+      <p>Fluent in both English and Portuguese, my aim is to create a space where people from diverse
+        backgrounds can come together to explore ideas, share knowledge, and grow personally. As my own journey
+        unfolds, I'm excited to share my experiences, professional insights, and the rich tapestry of Brazilian
+        culture. Whether you're interested in educational strategies, psychological perspectives, or simply getting
+        to know me, you're in the right place. Welcome!</p>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2 class="section-heading">Gallery</h2>
+      <img id="cover-photo" class="fade-in" src=".static/HeloisaWithDogs_01.png" alt="">
+    </section>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+      <h2 class="section-heading">About</h2>
+      <p>Donec tortor nisl, mattis non dapibus sed, blandit sit amet purus. Maecenas at imperdiet metus, efficitur sollicitudin justo. Proin at dignissim lorem. Nullam mattis vel felis vitae volutpat. Donec urna felis, gravida quis elementum eget, sollicitudin quis leo. Duis sed sapien facilisis, rhoncus leo et, mattis dolor. Aenean eget magna sed leo efficitur ullamcorper varius sed massa. Donec viverra nec libero nec iaculis.</p>
+      </div>
+
+      <div id="flip-cards">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Educator</h1>
+              <p>Duis ipsum elit, luctus ut.</p>
+              <button class="flip-btn" type="button">Learn More</button>
+            </div>
+            <div class="flip-card-back">
+              <h1>Educator</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum ante quam, sit amet faucibus magna vulputate et. Maecenas id.</p>
+              <button class="flip-btn" type="button">Back</button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Animal Lover</h1>
+              <p>Quisque faucibus at justo in.</p>
+              <button class="flip-btn" type="button">Learn More</button>
+            </div>
+            <div class="flip-card-back">
+              <h1>Animal Lover</h1>
+              <p>Vestibulum egestas sapien a lacus euismod eleifend. Suspendisse vitae diam id erat vehicula ultrices. Mauris egestas tellus diam, vitae laoreet.</p>
+              <button class="flip-btn" type="button">Back</button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Artist</h1>
+              <p>Duis ipsum elit, luctus ut.</p>
+              <button class="flip-btn" type="button">Learn More</button>
+            </div>
+            <div class="flip-card-back">
+              <h1>Artist</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nisi in arcu gravida iaculis eget egestas tellus. In eget.</p>
+              <button class="flip-btn" type="button">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+      <div id="contact-intro">
+        <h2 class="section-heading">Contact</h2>
+        <p>Proin scelerisque nisi a sodales feugiat. Nulla facilisi. Cras sodales mollis efficitur. Nam vitae lobortis urna. Cras porttitor nibh ut facilisis interdum. Cras varius rhoncus lectus ac molestie. Duis mollis lacinia gravida. Suspendisse sollicitudin eget neque luctus elementum. Fusce consectetur faucibus eros. Donec enim magna, dignissim ac lacus at, lobortis pretium turpis. Ut libero ante, finibus eu imperdiet vitae, auctor ut tellus. Donec posuere porta ultrices.</p>
+      </div>
+      <form action="POST" class="flex-container">
+        <label for="first-name">First Name: </label><input id="first-name" type="text" placeholder="Jane" required>
+        <label for="last-name">Last Name: </label><input id="last-name" type="text" placeholder="Doe" required>
+        <label for="email-address">Email: </label><input type="email" placeholder="random@gmail.com" required>
+        <label for="message-text">Message: </label><textarea id="message-text" cols="30" rows="10"></textarea>
+        <button type="submit" value="submit">Send</button>
+      </form>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>Heloísa de Lima Haab. Copyright 2023. Created by Harry Stuart Curtis (@Rustic-Citrus).</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $.fn.isInViewport = function () {
+      let elementTop = $(this).offset().top;
+      let elementBottom = elementTop + $(this).outerHeight();
+      let viewportTop = $(window).scrollTop();
+      let viewportBottom = viewportTop + $(window).height();
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+
+
+    const fadeElements = $(".fade-in").toArray();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const downButton = document.getElementById("nav-button-down");
+      downButton.addEventListener("click", function () {
+        const sections = document.querySelectorAll("section");
+
+        let currentSectionIndex = -1;
+        for (let i = 0; i < sections.length; i++) {
+          const rect = sections[i].getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSectionIndex = i;
+            break;
+          }
+        }
+
+        if (currentSectionIndex >= 0 && currentSectionIndex < sections.length - 1) {
+          const nextSection = sections[currentSectionIndex + 1];
+          nextSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+
+      const upButton = document.getElementById("nav-button-up");
+      upButton.addEventListener("click", function () {
+        const sections = document.querySelectorAll("section");
+
+        let currentSectionIndex = -1;
+        for (let i = 0; i < sections.length; i++) {
+          const rect = sections[i].getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSectionIndex = i;
+            break;
+          }
+        }
+
+        if (currentSectionIndex > 0 && currentSectionIndex <= sections.length - 1) {
+          const previousSection = sections[currentSectionIndex - 1];
+          previousSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+
+      const learnMoreButton = document.getElementById("flip-btn");
+    });
+
+    $(document).ready(() => {
+      let navHeight = $("nav").outerHeight();
+
+      $("#title-card").css("height", `calc(100vh - ${navHeight}px)`);
+
+      $(".flip-btn").click(function() {
+        $(this).parent().parent().toggleClass("flip");
+      });
+
+      $("#dropdown-btn").click(function() {
+        $(".dropdown-content").toggleClass("show");
+        $("#dropdown-btn").toggleClass("collapse");
+      })
+
+      $(window).on("load resize scroll", function () {
+        $(".fade-in").each(function () {
+          if ($(this).isInViewport()) {
+            $(this).css("opacity", "1").css("animation", "slide 2s")
+          } else {
+            $(this).css("opacity", "0")
+          }
+        })
+      })
+    });
+  </script>
+</body>
+
+</html>
