@@ -27,6 +27,33 @@
  }
 }
 
+@keyframes hover-effect {
+ 0% {
+  transform: scale(1);
+ }
+ 100% {
+  transform: scale(1.1);
+ }
+}
+
+@keyframes typing {
+ 0% {
+  width: 0;
+ }
+ 100% {
+  width: 100%;
+ }
+}
+
+@keyframes blinking-cursor {
+ 0%, 100% {
+  border-right-color: transparent;
+ }
+ 50% {
+  border-right-color: black;
+ }
+}
+
 /* General style rules for document */
 
 :root {
@@ -38,6 +65,10 @@
  --vanilla: #eae2b7;
  --serif: "EB Garamond", serif;
  --sans-serif: "Nunito", sans-serif;
+}
+
+html {
+ scroll-behavior: smooth
 }
 
 * {
@@ -67,7 +98,6 @@ button {
  border: none;
  padding: 10px;
  border-radius: 4px;
- border: solid 1px var(--blue);
  box-shadow: 1px 1px 5px var(--primary);
  max-width: 200px;
  margin: 0 auto;
@@ -81,8 +111,8 @@ section {
  display: flex;
  flex-direction: column;
  justify-content: center;
- width: 80%;
- max-width: 500px;
+ width: 100%;
+ padding: 2rem 10% 2rem 10%;
  margin: 0 auto;
 }
 
@@ -92,7 +122,8 @@ p {
 }
 
 label {
- font-size: 1.4rem;
+ font-size: 18px;
+ font-weight: bold;
 }
 
 nav {
@@ -107,14 +138,7 @@ nav {
 input, textarea {
  border: var(--blue) solid 1px;
  background-color: var(--vanilla);
-}
-
-input {
  border-radius: 2px;
-}
-
-textarea {
- border-radius: 5px;
 }
 
 footer {
@@ -123,6 +147,7 @@ footer {
 
 footer p {
  text-align: center;
+ font-family: var(--serif);
 }
 
 .h-l {
@@ -149,10 +174,6 @@ footer p {
 
 .flex-container {
  display: flex;
-}
-
-.content-container {
- display: flex;
  flex-direction: row;
  flex-wrap: wrap;
 }
@@ -164,32 +185,33 @@ footer p {
 }
 
 #brand-icon {
- font-size: 2rem;
+ font-size: 3rem;
+ font-family: var(--serif);
+}
+
+.nav-link {
+ padding: 0 1rem 0 1rem;
+ font-family: var(--serif);
+ font-size: 1.5rem;
 }
 
 /* Content section style rules */
 
-#welcome {
- flex-basis: 50%;
+.typing {
+ animation: typing 2s steps(39, end), blinking-cursor .75s step-end infinite;
+ white-space: nowrap;
+ overflow: hidden;
+ border-right: .1em solid var(--blue);
+ max-width: fit-content;
+ letter-spacing: 4px;
 }
 
 #gallery {
- flex-basis: 50%;
+ align-items: center;
 }
 
 #cover-photo {
  max-width: 500px;
-}
-
-.section-heading {
- font-size: 2rem;
- padding-bottom: 1rem;
- text-align: center;
-}
-
-.display-title {
- font-size: 5rem;
- display: block;
 }
 
 .fade-in {
@@ -223,17 +245,12 @@ footer p {
  display: flex;
  justify-content: center;
  flex-direction: column;
- padding: 4rem 0;
-}
-
-#about-intro {
- margin: 0 auto 2rem auto;
- padding: 0 10% 0 10%;
 }
 
 #flip-cards {
  display: flex;
  gap: 10%;
+ width: 100%;
  align-items: center;
  justify-content: center;
  padding-bottom: 2rem;
@@ -243,10 +260,21 @@ footer p {
 .flip-card {
  background-color: transparent;
  width: 30%;
+ height: 45vh;
  max-width: 300px;
- height: 50vh;
  max-height: 500px;
  perspective: 1000px;
+ transition: transform 1s;
+}
+
+.flip-card h1 {
+ margin-top: 1rem;
+ margin-bottom: 0;
+}
+
+.flip-card:hover {
+ animation: hover-effect 0.2s ease-in-out;
+ transform: scale(1.1);
 }
 
 .flip-card-inner {
@@ -268,16 +296,17 @@ footer p {
  height: 100%;
  -webkit-backface-visibility: hidden;
  backface-visibility: hidden;
- border: solid var(--blue) 1px;
  border-radius: 5px;
  box-shadow: 4px 3px 15px var(--blue);
  gap: 1rem;
  background-color: var(--vanilla);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ padding-bottom: 1rem;
 }
 
 .flip-card-front {
- display: flex;
- flex-direction: column;
  align-items: center;
 }
 
@@ -301,16 +330,31 @@ footer p {
 
 /* Contact section style rules */
 
-#contact form {
- flex-direction: column;
- justify-content: center;
- text-align: center;
+#contact {
+ width: 50%;
 }
 
-#contact label {
- display: block;
- margin: 0 auto;
+#contact-form {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 1rem;
 }
+
+.form-item {
+ display: flex;
+ flex-direction: row;
+}
+
+.form-item label {
+ flex-basis: 30%;
+}
+
+.form-item input, .form-item textarea {
+ flex-basis: 70%;
+}
+
+/* Media queries */
 
 @media (max-width: 575.98px) {
  #dropdown-btn {
@@ -342,7 +386,6 @@ footer p {
  }
  
  .dropdown-content a {
-  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -360,16 +403,49 @@ footer p {
 
  .flip-card {
   width: 90%;
+  height: 40vh;
  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {}
 
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+ section {
+  overflow: visible;
+ }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+ #flip-cards {
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+ }
 
-@media (min-width: 1200px) {}
+ .flip-card {
+  width: 90%;
+  height: 30vh;
+ }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+ #nav-buttons {
+  display: none;
+ }
+
+ section {
+  overflow: visible;
+ }
+
+ #flip-cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+ }
+
+ .flip-card {
+  width: 90%;
+  height: 60vh;
+ }
+}
 
 .collapse {
  position: fixed;
