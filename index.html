@@ -33,18 +33,16 @@
     <a id="nav-button-down"><i class="bi bi-arrow-down-square-fill"></i></a>
   </div>
   <main>
-    <div class="flex-container">
-      <section>
-        <h1 class="h-l typing">Hello, I'm Heloísa.</h1>
-        <p class="p-l fade-in">Welcome to the world of Heloísa, an avid learner, educator, and aspiring psychologist based in Florianópolis, Brazil. With a rich background in Psychology from UNISUL in Santa Catarina, I bring a unique blend of empathy and insight into my role as an educator at a private bilingual school.</p>
-        <p class="p-l fade-in">Fluent in both English and Portuguese, my aim is to create a space where people from diverse backgrounds can come together to explore ideas, share knowledge, and grow personally. As my own journey unfolds, I'm excited to share my experiences, professional insights, and the rich tapestry of Brazilian culture. Whether you're interested in educational strategies, psychological perspectives, or simply getting to know me, you're in the right place. Welcome!</p>
-      </section>
-      <!-- Gallery Section -->
-      <section>
-        <h2 class="h-m">Gallery</h2>
-        <img id="cover-photo" class="fade-in" src="images/HeloisaWithDogs_01.png" alt="">
-      </section>
-    </div>
+    <section>
+      <h1 class="h-l typing">Hello, I'm Heloísa.</h1>
+      <p class="p-l fade-in">Welcome to the world of Heloísa, an avid learner, educator, and aspiring psychologist based in Florianópolis, Brazil. With a rich background in Psychology from UNISUL in Santa Catarina, I bring a unique blend of empathy and insight into my role as an educator at a private bilingual school.</p>
+      <p class="p-l fade-in">Fluent in both English and Portuguese, my aim is to create a space where people from diverse backgrounds can come together to explore ideas, share knowledge, and grow personally. As my own journey unfolds, I'm excited to share my experiences, professional insights, and the rich tapestry of Brazilian culture. Whether you're interested in educational strategies, psychological perspectives, or simply getting to know me, you're in the right place. Welcome!</p>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2 class="h-m">Gallery</h2>
+      <img id="cover-photo" class="fade-in" src="images/HeloisaWithDogs_01.png" alt="">
+    </section>
     <!-- About Section -->
     <section id="about" class="fade-in">
       <div class=flex-container>
@@ -169,7 +167,7 @@
           }
         }
 
-        if (currentSectionIndex > 0 && currentSectionIndex <= sections.length - 1) {
+        if (currentSectionIndex >= 0 && currentSectionIndex < sections.length) {
           const previousSection = sections[currentSectionIndex - 1];
           previousSection.scrollIntoView({ behavior: "smooth" });
         }

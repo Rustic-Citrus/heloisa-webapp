@@ -8,11 +8,13 @@
 - Made text-align property of section headings consistent.
 - Changed layout of form element in contact section.
 - Removed gap property on flip-card elements.
+- Fixed gallery link in navigation menu.
 
 ### Known Issues
 
 - Section headings are too large on small devices.
 - Send button doesn't do anything.
+- Navigation up button still doesn't work on some devices above the gallery section (E.g. Samsung Galaxy S20, Samsung Galaxy S8+).
 
 ## v.1.0.0
 
