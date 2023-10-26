@@ -16,6 +16,10 @@
 - Send button doesn't do anything.
 - Navigation up button still doesn't work on some devices above the gallery section (E.g. Samsung Galaxy S20, Samsung Galaxy S8+).
 
+### To Do
+
+- Test other colour palettes.
+
 ## v.1.0.0
 
 ### Known Issues
