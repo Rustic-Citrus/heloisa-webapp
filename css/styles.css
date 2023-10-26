@@ -315,7 +315,6 @@ footer p {
  backface-visibility: hidden;
  border-radius: 5px;
  box-shadow: 4px 3px 15px var(--blue);
- gap: 1rem;
  background-color: var(--vanilla);
  display: flex;
  flex-direction: column;

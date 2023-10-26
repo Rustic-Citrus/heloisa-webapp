@@ -7,6 +7,7 @@
 - Changed height property of flip-card class.
 - Made text-align property of section headings consistent.
 - Changed layout of form element in contact section.
+- Removed gap property on flip-card elements.
 
 ### Known Issues
 
