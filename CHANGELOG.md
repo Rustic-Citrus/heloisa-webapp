@@ -6,6 +6,12 @@
 
 - Changed height property of flip-card class.
 - Made text-align property of section headings consistent.
+- Changed layout of form element in contact section.
+
+### Known Issues
+
+- Section headings are too large on small devices.
+- Send button doesn't do anything.
 
 ## v.1.0.0
 

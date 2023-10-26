@@ -86,8 +86,8 @@ button {
  font-weight: bold;
  font-size: 1.2rem;
  border: none;
- padding: 10px;
- border-radius: 4px;
+ padding: 1rem;
+ border-radius: 0.2rem;
  max-width: 200px;
  margin: 0 auto;
 }
@@ -138,6 +138,23 @@ input, textarea {
  border: var(--blue) solid 1px;
  background-color: var(--vanilla);
  border-radius: 2px;
+ -webkit-transition: width .35s ease-in-out;
+ transition: width .35s ease-in-out;
+ width: 50%;
+ padding: 0.5rem;
+}
+
+textarea {
+ height: 2rem;
+}
+
+input:focus, textarea:focus {
+ width: 67%;
+}
+
+form {
+ width: 80%;
+ margin: 0 auto;
 }
 
 footer {
@@ -330,18 +347,11 @@ footer p {
 
 /* Contact section style rules */
 
-.form-item {
- display: flex;
- flex-direction: row;
+#contact-form [class="flex-container"] {
+ gap: 1rem;
 }
 
-.form-item label {
- flex-basis: 30%;
-}
 
-.form-item input, .form-item textarea {
- flex-basis: 70%;
-}
 
 /* Media queries */
 
@@ -420,18 +430,6 @@ footer p {
 /* Change the size and wrapping of the flip-cards on smaller screens. */
 
 @media (max-width: 767px) {
- #flip-cards {
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 4rem;
- }
-
- .flip-card {
-  width: 90%;
- }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
  #flip-cards {
   flex-direction: row;
   flex-wrap: wrap;
