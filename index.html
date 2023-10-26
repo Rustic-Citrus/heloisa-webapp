@@ -15,7 +15,6 @@
 <body>
   <!-- Navigation Menu -->
   <nav>
-    <div class="flex-container">
       <a id="brand-icon" href="#welcome">
         Heloísa Haab
       </a>
@@ -29,28 +28,24 @@
       </div>
     </div>
   </nav>
-  <!-- Navigation Buttons -->
   <div id="nav-buttons">
     <a id="nav-button-up"><i class="bi bi-arrow-up-square-fill"></i></a>
     <a id="nav-button-down"><i class="bi bi-arrow-down-square-fill"></i></a>
   </div>
-  <div class="flex-container">
-    <!-- Welcome Section -->
-    <section id="welcome" class="background ">
-      <h1 class="h-l typing">Hello, I'm Heloísa.</h1>
-      <p class="p-l fade-in">Welcome to the world of Heloísa, an avid learner, educator, and aspiring psychologist based in
-        Florianópolis, Brazil. With a rich background in Psychology from UNISUL in Santa Catarina, I bring a unique
-        blend of empathy and insight into my role as an educator at a private bilingual school.</p>
-      <p class="p-l fade-in">Fluent in both English and Portuguese, my aim is to create a space where people from diverse backgrounds can come together to explore ideas, share knowledge, and grow personally. As my own journey unfolds, I'm excited to share my experiences, professional insights, and the rich tapestry of Brazilian culture. Whether you're interested in educational strategies, psychological perspectives, or simply getting to know me, you're in the right place. Welcome!</p>
-    </section>
-    <!-- Gallery Section -->
-    <section id="gallery">
-      <h2 class="h-m">Gallery</h2>
-      <img id="cover-photo" class="fade-in" src="images/HeloisaWithDogs_01.png" alt="">
-    </section>
-  </div>
+  <main>
+    <div class="flex-container">
+      <section>
+        <h1 class="h-l typing">Hello, I'm Heloísa.</h1>
+        <p class="p-l fade-in">Welcome to the world of Heloísa, an avid learner, educator, and aspiring psychologist based in Florianópolis, Brazil. With a rich background in Psychology from UNISUL in Santa Catarina, I bring a unique blend of empathy and insight into my role as an educator at a private bilingual school.</p>
+        <p class="p-l fade-in">Fluent in both English and Portuguese, my aim is to create a space where people from diverse backgrounds can come together to explore ideas, share knowledge, and grow personally. As my own journey unfolds, I'm excited to share my experiences, professional insights, and the rich tapestry of Brazilian culture. Whether you're interested in educational strategies, psychological perspectives, or simply getting to know me, you're in the right place. Welcome!</p>
+      </section>
+      <!-- Gallery Section -->
+      <section>
+        <h2 class="h-m">Gallery</h2>
+        <img id="cover-photo" class="fade-in" src="images/HeloisaWithDogs_01.png" alt="">
+      </section>
+    </div>
     <!-- About Section -->
-  <div class="flex-container">
     <section id="about" class="fade-in">
       <div class=flex-container>
         <h2 class="h-m">About</h2>
@@ -101,35 +96,36 @@
         </div>
       </div>
     </section>
-  </div>
-  <div class="flex-container">
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-      <div id="contact-intro">
-        <h2 class="h-m">Contact</h2>
-        <p class="p-l">Proin scelerisque nisi a sodales feugiat. Nulla facilisi. Cras sodales mollis efficitur. Nam vitae lobortis urna. Cras porttitor nibh ut facilisis interdum. Cras varius rhoncus lectus ac molestie. Duis mollis lacinia gravida. Suspendisse sollicitudin eget neque luctus elementum. Fusce consectetur faucibus eros. Donec enim magna, dignissim ac lacus at, lobortis pretium turpis. Ut libero ante, finibus eu imperdiet vitae, auctor ut tellus. Donec posuere porta ultrices.</p>
-      </div>
-      <form id="contact-form">
-        <div class="form-item">
-          <label for="first-name">First Name: </label>
-          <input id="first-name" type="text" placeholder="Jane" required>
+    <div class="flex-container">
+      <!-- Contact Section -->
+      <section id="contact" class="fade-in">
+        <div id="contact-intro">
+          <h2 class="h-m">Contact</h2>
+          <p class="p-l">Proin scelerisque nisi a sodales feugiat. Nulla facilisi. Cras sodales mollis efficitur. Nam vitae lobortis urna. Cras porttitor nibh ut facilisis interdum. Cras varius rhoncus lectus ac molestie. Duis mollis lacinia gravida. Suspendisse sollicitudin eget neque luctus elementum. Fusce consectetur faucibus eros. Donec enim magna, dignissim ac lacus at, lobortis pretium turpis. Ut libero ante, finibus eu imperdiet vitae, auctor ut tellus. Donec posuere porta ultrices.</p>
         </div>
-        <div class="form-item">
-          <label for="last-name">Last Name: </label>
-          <input id="last-name" type="text" placeholder="Doe" required>
-        </div>
-        <div class="form-item">
-          <label for="email-address">Email: </label>
-          <input type="email" placeholder="random@gmail.com" required>
-        </div>
-        <div class="form-item">
-          <label for="message-text">Message: </label>
-          <textarea id="message-text" cols="10" rows="5" placeholder="Hello Heloísa, ..."></textarea>
-        </div>
-        <button type="submit" value="submit">Send</button>
-      </form>
-    </section>
-  </div>
+        <form id="contact-form">
+          <div class="form-item">
+            <label for="first-name">First Name: </label>
+            <input id="first-name" name="firstName" type="text" placeholder="Jane" required>
+          </div>
+          <div class="form-item">
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" name="lastName" type="text" placeholder="Doe" required>
+          </div>
+          <div class="form-item">
+            <label for="email-address">Email: </label>
+            <input type="email" name="email" placeholder="random@gmail.com" required>
+          </div>
+          <div class="form-item">
+            <label for="message-text">Message: </label>
+            <textarea id="message-text" name="message" cols="10" rows="5" placeholder="Hello Heloísa, ..."></textarea>
+          </div>
+          <button type="submit" value="submit">Send</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
   <!-- Footer -->
   <footer>
     <p>Heloísa de Lima Haab. Copyright 2023. Created by Harry Stuart Curtis (@Rustic-Citrus).</p>
@@ -186,6 +182,17 @@
       });
 
       const learnMoreButton = document.getElementById("flip-btn");
+    });
+
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+
+      fetch("https://heloisahaabwebapp-emailfunction.azurewebsites.net", {
+        method: "POST",
+        body: formData,
+      });
     });
 
     $(document).ready(() => {

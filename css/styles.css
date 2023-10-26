@@ -3,7 +3,7 @@
 @keyframes slide {
  from {
   opacity: 0%;
-  transform: translate(-20px, 0);
+  transform: translate(-1em, 0);
  }
 
  to {
@@ -13,17 +13,7 @@
 
 @keyframes bounce {
  50% {
-  transform: translate(0, -2px);
- }
-}
-
-@keyframes ready {
- from {
-  opactity: 0;
- }
-
- to {
-  opactity: 1;
+  transform: translate(0, 0.2em);
  }
 }
 
@@ -38,7 +28,7 @@
 
 @keyframes typing {
  0% {
-  width: 0;
+  width: 0%;
  }
  100% {
   width: 100%;
@@ -59,7 +49,7 @@
 :root {
  --blue: #003049;
  --linen: #F5EBE0;
- --yellow: #fcbf49;
+ --yellow: rgb(252, 191, 73);
  --red: #d62828;
  --orange: #f77f00;
  --vanilla: #eae2b7;
@@ -68,7 +58,7 @@
 }
 
 html {
- scroll-behavior: smooth
+ scroll-behavior: smooth;
 }
 
 * {
@@ -98,7 +88,6 @@ button {
  border: none;
  padding: 10px;
  border-radius: 4px;
- box-shadow: 1px 1px 5px var(--primary);
  max-width: 200px;
  margin: 0 auto;
 }
@@ -111,9 +100,7 @@ section {
  display: flex;
  flex-direction: column;
  justify-content: center;
- width: 100%;
- padding: 2rem 10% 2rem 10%;
- margin: 0 auto;
+ flex-wrap: wrap;
 }
 
 p {
@@ -133,6 +120,14 @@ nav {
  flex-direction: row;
  justify-content: space-between;
  align-items: center;
+}
+
+main {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ padding: 0 1em;
 }
 
 input, textarea {
@@ -174,8 +169,10 @@ footer p {
 
 .flex-container {
  display: flex;
- flex-direction: row;
+ flex-direction: column;
  flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
 }
 
 /* Navigation bar style rules */
@@ -238,7 +235,6 @@ footer p {
 
 #cover-photo {
  border-radius: 10px;
- box-shadow: 0 4px 8px 0 var(--text-primary), 0 6px 20px 0 var(--text-primary);
 }
 
 #about {
@@ -330,17 +326,6 @@ footer p {
 
 /* Contact section style rules */
 
-#contact {
- width: 50%;
-}
-
-#contact-form {
- display: flex;
- flex-direction: column;
- justify-content: center;
- gap: 1rem;
-}
-
 .form-item {
  display: flex;
  flex-direction: row;
@@ -356,7 +341,13 @@ footer p {
 
 /* Media queries */
 
-@media (max-width: 575.98px) {
+/* Change navbar to a dropdown menu on phones and small tablets. Also, change cover-photo size to fill the width of its container. */
+
+@media (max-width: 755px) {
+ button {
+  max-width: none;
+ }
+
  #dropdown-btn {
   display: block;
   color: white;
@@ -364,6 +355,7 @@ footer p {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  width: 100%;
  }
  
  .dropdown {
@@ -377,7 +369,7 @@ footer p {
   left: 0;
   top: 50px;
   width: 100%;
-  background-color: var(--secondary);
+  background-color: var(--yellow);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-bottom-left-radius: 5px;
@@ -389,52 +381,54 @@ footer p {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  color: var(--blue)
  }
 
- section {
-  overflow: visible;
+ #cover-photo {
+  width: 100%;
  }
+}
 
+/* Remove the typing animation when the screen is very small. */
+
+@media (max-width: 300px) {
+ .typing {
+  animation: none;
+  white-space: wrap;
+  border: none;
+ }
+}
+
+/* Decrease font-size of typing class when text no longer fits on one line. */
+
+@media (min-width: 301px) and (max-width: 500px) {
+ .typing {
+  font-size: 1.5rem;
+ }
+}
+
+@media (min-width: 501px) and (max-width: 750px) {
+ .typing {
+  font-size: 2rem;
+ }
+}
+
+/* Change the size and wrapping of the flip-cards on smaller screens. */
+
+@media (max-width: 767px) {
  #flip-cards {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
  }
 
  .flip-card {
   width: 90%;
-  height: 40vh;
+  height: 45vh;
  }
 }
-
-@media (min-width: 576px) and (max-width: 767.98px) {}
 
 @media (min-width: 768px) and (max-width: 991.98px) {
- section {
-  overflow: visible;
- }
-
- #flip-cards {
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 2rem;
- }
-
- .flip-card {
-  width: 90%;
-  height: 30vh;
- }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
- #nav-buttons {
-  display: none;
- }
-
- section {
-  overflow: visible;
- }
-
  #flip-cards {
   flex-direction: row;
   flex-wrap: wrap;
@@ -451,7 +445,7 @@ footer p {
  position: fixed;
  top: 0;
  left: 0;
- width: 100%;
+ width: 1;
  height: 50px;
  border-radius: 0;
 }
