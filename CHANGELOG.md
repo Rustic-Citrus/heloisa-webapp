@@ -1,5 +1,11 @@
 # Changelog
 
+## v.1.0.1
+
+### Changes
+
+- Changed height property of flip-card class.
+
 ## v.1.0.0
 
 ### Known Issues

@@ -257,9 +257,8 @@ footer p {
 .flip-card {
  background-color: transparent;
  width: 30%;
- height: 45vh;
+ height: 18em;
  max-width: 300px;
- max-height: 500px;
  perspective: 1000px;
  transition: transform 1s;
 }
@@ -425,7 +424,6 @@ footer p {
 
  .flip-card {
   width: 90%;
-  height: 45vh;
  }
 }
 
@@ -438,7 +436,6 @@ footer p {
 
  .flip-card {
   width: 90%;
-  height: 60vh;
  }
 }
 
