@@ -199,6 +199,7 @@ footer p {
  white-space: nowrap;
  overflow: hidden;
  border-right: .1em solid var(--blue);
+ max-width: -moz-fit-content;
  max-width: fit-content;
  letter-spacing: 4px;
 }
