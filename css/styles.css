@@ -103,6 +103,10 @@ section {
  flex-wrap: wrap;
 }
 
+section h2 {
+ text-align: center;
+}
+
 p {
  padding-bottom: 1rem;
  text-align: justify;

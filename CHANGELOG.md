@@ -5,6 +5,7 @@
 ### Changes
 
 - Changed height property of flip-card class.
+- Made text-align property of section headings consistent.
 
 ## v.1.0.0
 
