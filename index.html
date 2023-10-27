@@ -181,7 +181,7 @@
       event.preventDefault();
       const formData = new FormData(form);
 
-      fetch("https://heloisahaab-mailersend-trigger.azurewebsites.net", {
+      fetch("https://heloisahaab-mailersend-trigger.azurewebsites.net/api/mailersend_trigger?code=HtBkbPg7ksp1CXcM-zctGtvP8TrThUjh4LQg8scxtJ8rAzFul28t0w==", {
         method: "POST",
         mode: "cors",
         name: `${formData.get("firstName")} ${formData.get("lastName")}`,
