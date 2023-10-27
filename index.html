@@ -181,10 +181,13 @@
       event.preventDefault();
       const formData = new FormData(form);
 
-      fetch("https://heloisahaabwebapp-emailfunction.azurewebsites.net", {
+      fetch("https://heloisahaab-mailersend-trigger.azurewebsites.net", {
         method: "POST",
-        body: formData,
-      });
+        mode: "cors",
+        name: `${formData.get("firstName")} ${formData.get("lastName")}`,
+        email: formData.get("email"),
+        message: formData.get("message")
+      })
     });
 
     $(document).ready(() => {
