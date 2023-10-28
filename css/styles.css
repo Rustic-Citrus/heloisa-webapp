@@ -44,6 +44,48 @@
  }
 }
 
+@keyframes fade-out {
+ 0% {
+  background: none;
+  opacity: 1;
+ }
+ 100% {
+  opacity: 0;
+ }
+}
+
+@keyframes close-envelope {
+ 0% {
+  background: none;
+ }
+ 33% {
+  background: url("../images/frame1.png") no-repeat center center;
+  transform: rotate(5deg);
+  background-size: contain;
+ }
+ 67% {
+  background: url("../images/frame2.png") no-repeat center center;
+  transform: rotate(-7deg);
+  background-size: contain;
+ }
+ 100% {
+  background: url("../images/frame3.png") no-repeat center center;
+  transform: rotate(2deg);
+  background-size: contain;
+ }
+}
+
+@keyframes sent-success {
+ 0% {
+  background: url("../images/frame5.png") no-repeat center center;
+  background-size: contain;
+  transform: rotate(-3deg);
+ }
+ 50% {
+  transform: rotate(2deg);
+ }
+}
+
 /* General style rules for document */
 
 :root {
@@ -350,7 +392,15 @@ footer p {
  gap: 1rem;
 }
 
+.disappear, .disappear * {
+ animation: fade-out 1s forwards;
+ transition: all 0.5s;
+ transform: scale(0.2);
+}
 
+.send-animation {
+ animation: close-envelope 1.5s steps(1, start) 0.2s, sent-success 2s 1.8s steps(1, end) infinite;
+}
 
 /* Media queries */
 

@@ -1,5 +1,21 @@
 # Changelog
 
+## v.1.0.2
+
+### Changes
+
+- Added animation to form submission.
+- Changed Send button to successfully trigger HTTP serverless function.
+
+### Known Issues
+
+- Section headings are too large on small devices.
+- Navigation up button still doesn't work on some devices above the gallery section (E.g. Samsung Galaxy S20, Samsung Galaxy S8+).
+
+### To Do
+
+- Test other colour palettes.
+
 ## v.1.0.1
 
 ### Changes

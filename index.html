@@ -101,19 +101,21 @@
           <h2 class="h-m">Contact</h2>
           <p class="p-l">Proin scelerisque nisi a sodales feugiat. Nulla facilisi. Cras sodales mollis efficitur. Nam vitae lobortis urna. Cras porttitor nibh ut facilisis interdum. Cras varius rhoncus lectus ac molestie. Duis mollis lacinia gravida. Suspendisse sollicitudin eget neque luctus elementum. Fusce consectetur faucibus eros. Donec enim magna, dignissim ac lacus at, lobortis pretium turpis. Ut libero ante, finibus eu imperdiet vitae, auctor ut tellus. Donec posuere porta ultrices.</p>
         </div>
-        <form id="contact-form">
-          <div class="flex-container">
-            <label for="form-item">First Name: </label>
-            <input id="first-name" name="firstName" type="text" placeholder="Jane" required>
-            <label for="last-name">Last Name: </label>
-            <input id="last-name" name="lastName" type="text" placeholder="Doe" required>
-            <label for="email-address">Email: </label>
-            <input type="email" name="email" placeholder="random@gmail.com" required>
-            <label for="message-text">Message: </label>
-            <textarea id="message-text" name="message" cols="10" rows="5" placeholder="Hello Heloísa, ..."></textarea>
-            <button id="send-button" type="submit" value="submit">Send</button>
-          </div>
-        </form>
+        <div class="animation-wrapper">
+          <form id="contact-form">
+            <div class="flex-container">
+              <label for="form-item">First Name: </label>
+              <input id="first-name" name="firstName" type="text" placeholder="Jane" required>
+              <label for="last-name">Last Name: </label>
+              <input id="last-name" name="lastName" type="text" placeholder="Doe" required>
+              <label for="email-address">Email: </label>
+              <input type="email" name="email" placeholder="random@gmail.com" required>
+              <label for="message-text">Message: </label>
+              <textarea id="message-text" name="message" cols="10" rows="5" placeholder="Hello Heloísa, ..."></textarea>
+              <button id="send-button" type="submit" value="submit">Send</button>
+            </div>
+          </form>
+        </div>
       </section>
     </div>
   </main>
@@ -188,6 +190,9 @@
         email: formData.get("email"),
         message: formData.get("message")
       })
+
+      this.classList.add("disappear");
+      this.parentElement.classList.add("send-animation");
     });
 
     $(document).ready(() => {
