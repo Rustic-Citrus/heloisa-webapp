@@ -1,5 +1,19 @@
 # Changelog
 
+## v.1.0.3
+
+### Changes
+
+### Known Issues
+
+- Padding of paragraph elements pushes text too far left.
+
+### To Do
+
+- Change sent frame at end of form submission animation. Remove rotate transformation from frames.
+- Test other colour palettes.
+- Add gallery animations and interactivity.
+
 ## v.1.0.2
 
 ### Changes
