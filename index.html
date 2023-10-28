@@ -47,7 +47,7 @@
     <section id="about" class="fade-in">
       <div class=flex-container>
         <h2 class="h-m">About</h2>
-        <p class="p-l">Donec tortor nisl, mattis non dapibus sed, blandit sit amet purus. Maecenas at imperdiet metus, efficitur sollicitudin justo. Proin at dignissim lorem. Nullam mattis vel felis vitae volutpat. Donec urna felis, gravida quis elementum eget, sollicitudin quis leo. Duis sed sapien facilisis, rhoncus leo et, mattis dolor. Aenean eget magna sed leo efficitur ullamcorper varius sed massa. Donec viverra nec libero nec iaculis.</p>
+        <p class="p-l">Click on the cards to find out more about me.</p>
       </div>
       <div id="flip-cards">
         <div class="flip-card">
@@ -59,7 +59,7 @@
             </div>
             <div class="flip-card-back">
               <h1 class="h-s">Educator</h1>
-              <p class="p-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum ante quam, sit amet faucibus magna vulputate et. Maecenas id.</p>
+              <p class="p-m">Working with young people is highly rewarding. I have had the privilege to work in education for over a decade.</p>
               <button class="flip-btn" type="button">Back</button>
             </div>
           </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="flip-card-back">
               <h1 class="h-s">Animal Lover</h1>
-              <p class="p-m">Vestibulum egestas sapien a lacus euismod eleifend. Suspendisse vitae diam id erat vehicula ultrices. Mauris egestas tellus diam, vitae laoreet.</p>
+              <p class="p-m">I have a genuine affection for animals. They have always held a special place in my heart, and I have always cherished their companionship.</p>
               <button class="flip-btn" type="button">Back</button>
             </div>
           </div>
@@ -82,25 +82,25 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <h1 class="h-s">Artist</h1>
-              <p class="p-m">Duis ipsum elit, luctus ut.</p>
+              <img src="images/heloisa_artist_logo.png" alt="" class="logo">
               <button class="flip-btn" type="button">Learn More</button>
             </div>
             <div class="flip-card-back">
               <h1 class="h-s">Artist</h1>
-              <p class="p-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nisi in arcu gravida iaculis eget egestas tellus. In eget.</p>
+              <p class="p-m">I enjoy drawing and playing with colors. There's just something special about putting feelings onto paper.</p>
               <button class="flip-btn" type="button">Back</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="flex-container">
-      <!-- Contact Section -->
-      <section id="contact" class="fade-in">
-        <div id="contact-intro">
-          <h2 class="h-m">Contact</h2>
-          <p class="p-l">Proin scelerisque nisi a sodales feugiat. Nulla facilisi. Cras sodales mollis efficitur. Nam vitae lobortis urna. Cras porttitor nibh ut facilisis interdum. Cras varius rhoncus lectus ac molestie. Duis mollis lacinia gravida. Suspendisse sollicitudin eget neque luctus elementum. Fusce consectetur faucibus eros. Donec enim magna, dignissim ac lacus at, lobortis pretium turpis. Ut libero ante, finibus eu imperdiet vitae, auctor ut tellus. Donec posuere porta ultrices.</p>
-        </div>
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+      <div id="contact-intro">
+        <h2 class="h-m">Contact</h2>
+        <p class="p-l">If you'd like to get in touch with me, you can submit a form below and I'll get back to you ASAP.</p>
+      </div>
+      <div class="animation-wrapper">
         <form id="contact-form">
           <div class="flex-container">
             <label for="form-item">First Name: </label>
@@ -114,8 +114,8 @@
             <button id="send-button" type="submit" value="submit">Send</button>
           </div>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -179,6 +179,9 @@
           message: formData.get("message")
         })
       })
+
+      this.classList.add("disappear");
+      this.parentElement.classList.add("send-animation");
     });
 
     $.fn.isInViewport = function () {

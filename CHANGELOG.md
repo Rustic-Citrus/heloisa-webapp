@@ -1,5 +1,25 @@
 # Changelog
 
+## v.1.0.2
+
+### Changes
+
+- Added animation to form submission.
+- Changed Send button to successfully trigger HTTP serverless function.
+- Changed colour palette.
+- Changed responsive design for larger devices, including flip card layout.
+- Added some actual text to the webpage.
+- Added a logo for the artist brand.
+
+### Known Issues
+
+- Navigation up button still doesn't work on some devices above the gallery section (E.g. Samsung Galaxy S20, Samsung Galaxy S8+).
+
+### To Do
+
+- Test other colour palettes.
+- Add gallery animations and interactivity.
+
 ## v.1.0.1
 
 ### Changes
