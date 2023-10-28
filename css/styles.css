@@ -89,29 +89,29 @@
 /* General style rules for document */
 
 :root {
- --blue: #003049;
  --linen: #F5EBE0;
- --yellow: rgb(252, 191, 73);
- --red: #d62828;
- --orange: #f77f00;
- --vanilla: #eae2b7;
+ --black-bean: #3c1518;
+ --blood-red: #69140E; 
+ --brown: #A44200; 
+ --bronze: #D58936;
+ --vanilla: #F2F3AE;
  --serif: "EB Garamond", serif;
  --sans-serif: "Nunito", sans-serif;
 }
 
 html {
  scroll-behavior: smooth;
+ border: var(--brown) solid 20px;
 }
 
 * {
  font-family: var(--sans-serif);
- color: var(--blue);
+ color: var(--black-bean);
 }
 
 body {
  box-sizing: border-box;
- background-color: var(--linen);
- border: var(--yellow) solid 20px;
+ background-color: var(--vanilla);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -119,12 +119,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
- color: var(--orange);
+ color: var(--brown);
  text-decoration: none;
 }
 
 button {
- background-color: var(--yellow);
+ background-color: var(--blood-red);
+ color: var(--vanilla);
  font-weight: bold;
  font-size: 1.2rem;
  border: none;
@@ -147,6 +148,10 @@ section {
 
 section h2 {
  text-align: center;
+}
+
+section p, section h2, section h1 {
+ padding: 0 2rem;
 }
 
 p {
@@ -177,8 +182,8 @@ main {
 }
 
 input, textarea {
- border: var(--blue) solid 1px;
- background-color: var(--vanilla);
+ border: var(--black-bean) solid 1px;
+ background-color: white;
  border-radius: 2px;
  -webkit-transition: width .35s ease-in-out;
  transition: width .35s ease-in-out;
@@ -200,7 +205,7 @@ form {
 }
 
 footer {
- margin: 0 auto;
+ margin: 5rem auto 0 auto;
 }
 
 footer p {
@@ -261,7 +266,7 @@ footer p {
  animation: typing 2s steps(39, end), blinking-cursor .75s step-end infinite;
  white-space: nowrap;
  overflow: hidden;
- border-right: .1em solid var(--blue);
+ border-right: .1em solid var(--black-bean);
  max-width: -moz-fit-content;
  max-width: fit-content;
  letter-spacing: 4px;
@@ -292,7 +297,7 @@ footer p {
  display: block;
  text-align: center;
  font-size: 2rem;
- color: var(--red);
+ color: var(--bronze);
 }
 
 /* About section style rules */
@@ -315,6 +320,7 @@ footer p {
  justify-content: center;
  padding-bottom: 2rem;
  flex-flow: row wrap;
+ margin: 2rem auto;
 }
 
 .flip-card {
@@ -356,8 +362,8 @@ footer p {
  -webkit-backface-visibility: hidden;
  backface-visibility: hidden;
  border-radius: 5px;
- box-shadow: 4px 3px 15px var(--blue);
- background-color: var(--vanilla);
+ box-shadow: 4px 3px 15px var(--black-bean);
+ background-color: var(--linen);
  display: flex;
  flex-direction: column;
  justify-content: space-around;
@@ -413,12 +419,15 @@ footer p {
 
  #dropdown-btn {
   display: block;
-  color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   width: 100%;
+ }
+
+ #dropdown-btn i {
+  color: var(--vanilla)
  }
  
  .dropdown {
@@ -432,7 +441,7 @@ footer p {
   left: 0;
   top: 50px;
   width: 100%;
-  background-color: var(--yellow);
+  background-color: var(--vanilla);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-bottom-left-radius: 5px;
@@ -444,7 +453,7 @@ footer p {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  color: var(--blue)
+  color: var(--navy-blue)
  }
 
  #cover-photo {
@@ -487,6 +496,51 @@ footer p {
 
  .flip-card {
   width: 90%;
+ }
+}
+
+/* Change the flip card layout and switch to a two-column layout on wider screens. */
+
+@media (min-width: 1440px) {
+ section {
+  flex-basis: 50%;
+ }
+
+ section p {
+  padding: 2rem;
+ }
+
+ #flip-cards {
+  padding-top: 2rem;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 0;
+ }
+
+ .flip-card {
+  width: 30%;
+  position: relative;
+ }
+
+ .flip-card:nth-of-type(1) {
+  left: 5rem;
+  transform: rotate(-10deg);
+ }
+
+ .flip-card:nth-of-type(3) {
+  right: 5rem;
+  top: 2rem;
+  transform: rotate(10deg);
+ }
+
+ .flip-card:hover {
+  animation: none;
+  transform: scale(1.1);
+  z-index: 9999;
+ }
+
+ footer {
+  margin-top: 5rem;
  }
 }
 
