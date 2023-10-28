@@ -8,6 +8,8 @@
 - Changed Send button to successfully trigger HTTP serverless function.
 - Changed colour palette.
 - Changed responsive design for larger devices, including flip card layout.
+- Added some actual text to the webpage.
+- Added a logo for the artist brand.
 
 ### Known Issues
 
