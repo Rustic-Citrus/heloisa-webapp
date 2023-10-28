@@ -124,16 +124,6 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $.fn.isInViewport = function () {
-      let elementTop = $(this).offset().top;
-      let elementBottom = elementTop + $(this).outerHeight();
-      let viewportTop = $(window).scrollTop();
-      let viewportBottom = viewportTop + $(window).height();
-      return elementBottom > viewportTop && elementTop < viewportBottom;
-    }
-
-    const fadeElements = $(".fade-in").toArray();
-
     document.addEventListener("DOMContentLoaded", function () {
       const downButton = document.getElementById("nav-button-down");
       downButton.addEventListener("click", function () {
@@ -190,6 +180,16 @@
         })
       })
     });
+
+    $.fn.isInViewport = function () {
+      let elementTop = $(this).offset().top;
+      let elementBottom = elementTop + $(this).outerHeight();
+      let viewportTop = $(window).scrollTop();
+      let viewportBottom = viewportTop + $(window).height();
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    const fadeElements = $(".fade-in").toArray();
 
     $(document).ready(() => {
       let navHeight = $("nav").outerHeight();
