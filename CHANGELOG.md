@@ -4,9 +4,7 @@
 
 ### Changes
 
-### Known Issues
-
-- Padding of paragraph elements pushes text too far left.
+- Changed horizontal padding of typing class.
 
 ### To Do
 
