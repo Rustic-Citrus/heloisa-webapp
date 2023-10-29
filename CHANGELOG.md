@@ -5,6 +5,7 @@
 ### Changes
 
 - Changed horizontal padding of typing class.
+- Changed text-align property of contact-form section to center.
 
 ### To Do
 
