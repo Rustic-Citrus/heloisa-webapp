@@ -4,12 +4,13 @@
 
 ### Changes
 
-- Added favicon
+- Added favicon.
+- Removed padding for section headings and paragraphs on smaller devices.
+- Changed typing class font-size on devices with very narrow screens.
 
 ### To Do
 
 - Add gallery animations and interactivity.
-- Change padding on smaller devices
 
 ## v.1.0.3
 

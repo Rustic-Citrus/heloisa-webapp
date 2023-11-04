@@ -278,7 +278,7 @@ footer p {
  max-width: fit-content;
  letter-spacing: 4px;
  padding-right: 0;
- padding-left: 1.6rem;
+ /* padding-left: 1.6rem; */
 }
 
 #gallery {
@@ -472,15 +472,20 @@ footer p {
  #cover-photo {
   width: 100%;
  }
+
+ #brand-icon {
+  font-size: 2rem;
+ }
 }
 
-/* Remove the typing animation when the screen is very small. */
+/* Remove the typing animation when the screen is very small, and change the padding for the paragraph and heading elements. */
 
 @media (max-width: 300px) {
  .typing {
   animation: none;
   white-space: wrap;
   border: none;
+  font-size: 1.8rem;
  }
 }
 
@@ -509,6 +514,10 @@ footer p {
 
  .flip-card {
   width: 90%;
+ }
+
+ section p, section h2, section h1 {
+  padding: 0;
  }
 }
 
