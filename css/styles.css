@@ -277,6 +277,8 @@ footer p {
  max-width: -moz-fit-content;
  max-width: fit-content;
  letter-spacing: 4px;
+ padding-right: 0;
+ padding-left: 1.6rem;
 }
 
 #gallery {
@@ -403,6 +405,10 @@ footer p {
 
 #contact-form [class="flex-container"] {
  gap: 1rem;
+}
+
+#contact-form {
+ text-align: center;
 }
 
 .disappear, .disappear * {

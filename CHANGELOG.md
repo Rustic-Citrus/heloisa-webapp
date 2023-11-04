@@ -1,5 +1,18 @@
 # Changelog
 
+## v.1.0.3
+
+### Changes
+
+- Changed horizontal padding of typing class.
+- Changed text-align property of contact-form section to center.
+
+### To Do
+
+- Change sent frame at end of form submission animation. Remove rotate transformation from frames.
+- Test other colour palettes.
+- Add gallery animations and interactivity.
+
 ## v.1.0.2
 
 ### Changes
