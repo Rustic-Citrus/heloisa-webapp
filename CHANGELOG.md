@@ -1,5 +1,16 @@
 # Changelog
 
+## v.1.0.4
+
+### Changes
+
+- Added favicon
+
+### To Do
+
+- Add gallery animations and interactivity.
+- Change padding on smaller devices
+
 ## v.1.0.3
 
 ### Changes
