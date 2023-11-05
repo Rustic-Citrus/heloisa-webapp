@@ -493,13 +493,13 @@ footer p {
 
 @media (min-width: 301px) and (max-width: 500px) {
  .typing {
-  font-size: 1.5rem;
+  font-size: calc(100vw * 0.06);
  }
 }
 
 @media (min-width: 501px) and (max-width: 750px) {
  .typing {
-  font-size: 2rem;
+  font-size: calc(100vw * 0.07);
  }
 }
 

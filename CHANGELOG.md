@@ -1,5 +1,13 @@
 # Changelog
 
+## v.1.0.5
+
+### Changes
+
+- Updated welcome text
+- Changed filenames
+- Changed media query rules for typing class
+
 ## v.1.0.4
 
 ### Changes
