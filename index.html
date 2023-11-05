@@ -8,7 +8,7 @@
   <meta name="author" content="Harry Stuart Curtis">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?&family=EB+Garamond&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?&family=EB+Garamond&family=Nunito&display=swap&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
@@ -37,14 +37,32 @@
   </div>
   <main>
     <section>
-      <h1 class="h-l typing">Hello, I'm Heloísa.</h1>
-      <p class="p-l fade-in">Welcome to the world of Heloísa, an avid learner, educator, and aspiring psychologist based in Florianópolis, Brazil. With a rich background in Psychology from UNISUL in Santa Catarina, I bring a unique blend of empathy and insight into my role as an educator at a private bilingual school.</p>
-      <p class="p-l fade-in">Fluent in both English and Portuguese, my aim is to create a space where people from diverse backgrounds can come together to explore ideas, share knowledge, and grow personally. As my own journey unfolds, I'm excited to share my experiences, professional insights, and the rich tapestry of Brazilian culture. Whether you're interested in educational strategies, psychological perspectives, or simply getting to know me, you're in the right place. Welcome!</p>
+      <h1 class="h-l typing">Hello, I'm Heloísa!</h1>
+      <p class="p-l fade-in">Heloísa, or “Helô” to her friends (like “L-O”, with the “o” like “lot”, not “OK”), is an educator, psychology student, and animal person. She is fluent in both Portuguese and English, spending her childhood in the USA and her teenage years in Brazil.</p>
+      <p class="p-l fade-in">With over a decade of experience in education, she thrives on the connection she builds with her students. Helô teaches English to learners of all ages and co-teaches in blended learning programs. She has worked in a range of settings, from state industrial federations to bilingual schools. Her background in psychology gives her a deeper understanding of the complexity of human behaviour. This has made her a critical, empathetic, and adaptive educator. In line with her caring personality, Helô has a love for all living beings. Her ability to care for animals comes from having always had them in her life, be they dogs, cats, horses, chickens, or parrots. In essence, what defines Heloísa is her desire to contribute to the world.</p>
+      <p class="p-l fade-in">Heloísa welcomes you to her website and is grateful that you have taken the time to find out more about her. She is open to new ideas and eager to collaborate, especially in education, psychology, and animal care.  At the bottom of this page, you can find a contact form if you would like to send her a message. Thank you!</p>
     </section>
     <!-- Gallery Section -->
     <section id="gallery">
       <h2 class="h-m">Gallery</h2>
-      <img id="cover-photo" class="fade-in" src="images/HeloisaWithDogs_01.png" alt="">
+      <div class="photo-container">
+        <img class="photo" src="images/image1.png" alt="">
+        <img class="photo" src="images/image2.jpg" alt="">
+        <img class="photo" src="images/image3.jpg" alt="">
+        <img class="photo" src="images/image4.jpg" alt="">
+      </div>
+      <div class="btn-container">
+        <a class="gallery-btn" onclick="changePhoto(-1, -1)">
+          <span class="material-symbols-outlined">
+            chevron_left
+          </span>
+        </a>
+        <a class="gallery-btn" onclick="changePhoto(1, 1)">
+          <span class="material-symbols-outlined">
+            chevron_right
+          </span>
+        </a>
+      </div>
     </section>
     <!-- About Section -->
     <section id="about" class="fade-in">
@@ -57,7 +75,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <h1 class="h-s">Educator</h1>
-              <img src="images/HelloHelo_Logo.png" alt="" class="logo">
+              <img src="images/logo1.png" alt="" class="logo">
               <button class="flip-btn" type="button">Learn More</button>
             </div>
             <div class="flip-card-back">
@@ -70,12 +88,12 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h1 class="h-s">Animal Lover</h1>
-              <img src="images/MiAumaGemea_Logo.png" alt="" class="logo">
+              <h1 class="h-s">Animal Person</h1>
+              <img src="images/logo2.png" alt="" class="logo">
               <button class="flip-btn" type="button">Learn More</button>
             </div>
             <div class="flip-card-back">
-              <h1 class="h-s">Animal Lover</h1>
+              <h1 class="h-s">Animal Person</h1>
               <p class="p-m">I have a genuine affection for animals. They have always held a special place in my heart, and I have always cherished their companionship.</p>
               <button class="flip-btn" type="button">Back</button>
             </div>
@@ -85,7 +103,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <h1 class="h-s">Artist</h1>
-              <img src="images/heloisa_artist_logo.png" alt="" class="logo">
+              <img src="images/logo3.png" alt="" class="logo">
               <button class="flip-btn" type="button">Learn More</button>
             </div>
             <div class="flip-card-back">
@@ -126,6 +144,42 @@
     <p>Heloísa de Lima Haab. Copyright 2023. Created by Harry Stuart Curtis (@Rustic-Citrus).</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $.fn.isInViewport = function () {
+      let elementTop = $(this).offset().top;
+      let elementBottom = elementTop + $(this).outerHeight();
+      let viewportTop = $(window).scrollTop();
+      let viewportBottom = viewportTop + $(window).height();
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    const fadeElements = $(".fade-in").toArray();
+
+    $(document).ready(() => {
+      let navHeight = $("nav").outerHeight();
+
+      $("#title-card").css("height", `calc(100vh - ${navHeight}px)`);
+
+      $(".flip-btn").click(function() {
+        $(this).parent().parent().toggleClass("flip");
+      });
+
+      $("#dropdown-btn").click(function() {
+        $(".dropdown-content").toggleClass("show");
+        $("#dropdown-btn").toggleClass("collapse");
+      })
+
+      $(window).on("load resize scroll", function () {
+        $(".fade-in").each(function () {
+          if ($(this).isInViewport()) {
+            $(this).css("opacity", "1").css("animation", "slide 2s")
+          } else {
+            $(this).css("opacity", "0")
+          }
+        })
+      })
+    });
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const downButton = document.getElementById("nav-button-down");
@@ -186,41 +240,34 @@
       this.classList.add("disappear");
       this.parentElement.classList.add("send-animation");
     });
+    let photoIndex = 1;
+    
+    const showPhoto = n => {
+      let photos = document.getElementsByClassName("photo");
 
-    $.fn.isInViewport = function () {
-      let elementTop = $(this).offset().top;
-      let elementBottom = elementTop + $(this).outerHeight();
-      let viewportTop = $(window).scrollTop();
-      let viewportBottom = viewportTop + $(window).height();
-      return elementBottom > viewportTop && elementTop < viewportBottom;
+      if (n > photos.length) {
+        photoIndex = 1;
+      } else if (n < 1) {
+        photoIndex = photos.length;
+      }
+
+      for (let i = 0; i < photos.length; i++) {
+        photos[i].classList.remove("fade-out-left", "fade-out-right", "fade-in");
+        photos[i].style.display = "none";
+      }
+
+      photos[photoIndex-1].style.display = "flex";
     }
 
-    const fadeElements = $(".fade-in").toArray();
+    const changePhoto = (n, direction) => {
+      let photos = document.getElementsByClassName("photo");
+      photos[photoIndex-1].classList.add(direction === 1 ? "fade-out-left" : "fade-out-right");
+      setTimeout(() => {
+        showPhoto(photoIndex += n);
+      }, 800);
+    }
 
-    $(document).ready(() => {
-      let navHeight = $("nav").outerHeight();
-
-      $("#title-card").css("height", `calc(100vh - ${navHeight}px)`);
-
-      $(".flip-btn").click(function() {
-        $(this).parent().parent().toggleClass("flip");
-      });
-
-      $("#dropdown-btn").click(function() {
-        $(".dropdown-content").toggleClass("show");
-        $("#dropdown-btn").toggleClass("collapse");
-      })
-
-      $(window).on("load resize scroll", function () {
-        $(".fade-in").each(function () {
-          if ($(this).isInViewport()) {
-            $(this).css("opacity", "1").css("animation", "slide 2s")
-          } else {
-            $(this).css("opacity", "0")
-          }
-        })
-      })
-    });
+    showPhoto(1);
   </script>
 </body>
 

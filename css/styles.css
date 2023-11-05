@@ -54,6 +54,28 @@
  }
 }
 
+@keyframes fade-out-left {
+ 0% {
+  opacity: 1;
+  transform: translate(0px);
+ }
+ 100% {
+  transform: translate(-10px);
+  opacity: 0;
+ }
+}
+
+@keyframes fade-out-right {
+ 0% {
+  opacity: 1;
+  transform: translate(0px);
+ }
+ 100% {
+  transform: translate(10px);
+  opacity: 0;
+ }
+}
+
 @keyframes close-envelope {
  0% {
   background: none;
@@ -142,6 +164,7 @@ button {
 
 a:hover, button:hover {
  animation: bounce 2s;
+ cursor: pointer;
 }
 
 section {
@@ -285,12 +308,58 @@ footer p {
  align-items: center;
 }
 
-#cover-photo {
- max-width: 500px;
+.photo-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 1rem;
+ height: 500px;
+}
+
+.photo {
+ object-position: center;
+ width: auto;
+ max-height: 450px;
+ object-fit: cover;
+}
+
+.btn-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 1rem;
+}
+
+.gallery-btn {
+ background-color: var(--blood-red);
+ width: 2rem;
+ height: 2rem;
+ border-radius: 0.2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.gallery-btn span {
+ color: var(--vanilla);
+ font-size: 1.8rem;
+ font-weight: bold;
 }
 
 .fade-in {
  opacity: 0;
+}
+
+.fade-out-left, .fade-out-right {
+ opacity: 0;
+}
+
+.fade-out-right {
+ animation: fade-out-right 0.8s forwards;
+}
+
+.fade-out-left {
+ animation: fade-out-left 0.8s forwards;
 }
 
 /* Navigation buttons */
@@ -311,7 +380,7 @@ footer p {
 
 /* About section style rules */
 
-#cover-photo {
+.photo {
  border-radius: 10px;
 }
 
@@ -469,7 +538,7 @@ footer p {
   color: var(--navy-blue)
  }
 
- #cover-photo {
+ .photo {
   width: 100%;
  }
 
@@ -493,13 +562,13 @@ footer p {
 
 @media (min-width: 301px) and (max-width: 500px) {
  .typing {
-  font-size: 1.5rem;
+  font-size: calc(100vw * 0.06);
  }
 }
 
 @media (min-width: 501px) and (max-width: 750px) {
  .typing {
-  font-size: 2rem;
+  font-size: calc(100vw * 0.07);
  }
 }
 
