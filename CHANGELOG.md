@@ -1,5 +1,11 @@
 # Changelog
 
+## v.1.1.1
+
+### Changes
+
+- Changed text in the flip cards.
+
 ## v.1.1.0
 
 ### Changes
