@@ -1,5 +1,18 @@
 # Changelog
 
+## v.1.2.0
+
+### Changes
+
+- Added language compatibility for Portuguese.
+- Changed photos in gallery.
+
+## v.1.1.1
+
+### Changes
+
+- Changed text in the flip cards.
+
 ## v.1.1.0
 
 ### Changes

@@ -283,6 +283,14 @@ footer p {
  font-family: var(--serif);
 }
 
+#langButton {
+ font-weight: bold;
+ background-color: var(--blood-red);
+ color: var(--linen);
+ padding: 1rem;
+ border-radius: 0.5rem;
+}
+
 .nav-link {
  padding: 0 1rem 0 1rem;
  font-family: var(--serif);
@@ -536,6 +544,11 @@ footer p {
   text-decoration: none;
   display: block;
   color: var(--navy-blue)
+ }
+
+ #langButton {
+  background-color: var(--vanilla);
+  color: var(--black-bean);
  }
 
  .photo {
