@@ -122,13 +122,24 @@
  --brown: #A44200; 
  --bronze: #D58936;
  --vanilla: #F2F3AE;
+ --dutch-white: #faebc7ff;
+ --peach: #f8e4b4ff;
+ --peach-yellow: #f6dda2ff;
+ --peach-yellow-2: #f4d690ff;
+ --jasmine: #f2cf7dff;
+ --saffron: #f0c86aff;
+ --saffron-2: #eec158ff;
+ --xanthous: #edba45ff;
+ --xanthous-2: #ebb433ff;
+ --harvest-gold: #e9ad20ff;
+ --burnt-orange: #B85000;
  --serif: "EB Garamond", serif;
  --sans-serif: "Nunito", sans-serif;
 }
 
 html {
  scroll-behavior: smooth;
- border: var(--brown) solid 20px;
+ border: var(--burnt-orange) solid 20px;
 }
 
 * {
@@ -138,7 +149,7 @@ html {
 
 body {
  box-sizing: border-box;
- background-color: var(--vanilla);
+ background-image: linear-gradient(to right, var(--dutch-white), var(--peach), var(--peach-yellow), var(--peach-yellow-2), var(--jasmine), var(--saffron), var(--saffron-2), var(--xanthous), var(--xanthous-2), var(--harvest-gold));
 }
 
 h1, h2, h3, h4, h5, h6 {
