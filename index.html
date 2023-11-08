@@ -12,22 +12,21 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="alternate" hreflang="pt" href="pt/index.html" />
   <title>Heloísa Haab</title>
 </head>
 
 <body>
   <!-- Navigation Menu -->
   <nav>
-    <a id="brand-icon" href="#welcome">
-        Heloísa Haab
-      </a>
-        </div>
+    <a id="brand-icon" href="#welcome">Heloísa Haab</a>
     <div class="flex-container dropdown">
       <button id="dropdown-btn" type="button" aria-label="dropdown-menu"><i class="bi bi-three-dots-vertical"></i></button>
       <div id="nav-menu" class="dropdown-content">
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#gallery">Gallery</a>
         <a class="nav-link" href="#contact">Contact</a>
+        <a id="langButton" href="pt/index.html">PT</a>
       </div>
     </div>
   </nav>
@@ -46,10 +45,10 @@
     <section id="gallery">
       <h2 class="h-m">Gallery</h2>
       <div class="photo-container">
-        <img class="photo" src="images/image1.png" alt="">
+        <img class="photo" src="images/image1.jpg" alt="">
         <img class="photo" src="images/image2.jpg" alt="">
         <img class="photo" src="images/image3.jpg" alt="">
-        <img class="photo" src="images/image4.jpg" alt="">
+        <img class="photo" src="images/image4.png" alt="">
       </div>
       <div class="btn-container">
         <a class="gallery-btn" onclick="changePhoto(-1, -1)">
@@ -144,7 +143,30 @@
     <p>Heloísa de Lima Haab. Copyright 2023. Created by Harry Stuart Curtis (@Rustic-Citrus).</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.toLowerCase();
+      // Check for a language override in localStorage
+      let languageOverride = localStorage.getItem('languageOverride');
+
+      if (languageOverride) {
+        // Redirect based on the override
+        if (languageOverride === 'en') {
+          localStorage.removeItem('languageOverride');
+        } else if (languageOverride === 'pt') {
+          window.location.href = '/pt/';
+          localStorage.removeItem('languageOverride');
+        }
+      } else {
+        // Your existing language detection logic
+        if (userLang.includes("pt") && !window.location.pathname.includes("/pt/")) {
+          window.location.href = '/pt/';
+        } // No need for an 'else' if English is the default and there's no '/en/' subdirectory
+      }
+    });
+  </script>
+  <script>
     $.fn.isInViewport = function () {
       let elementTop = $(this).offset().top;
       let elementBottom = elementTop + $(this).outerHeight();

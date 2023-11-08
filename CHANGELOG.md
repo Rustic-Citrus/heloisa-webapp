@@ -1,5 +1,12 @@
 # Changelog
 
+## v.1.2.0
+
+### Changes
+
+- Added language compatibility for Portuguese.
+- Changed photos in gallery.
+
 ## v.1.1.1
 
 ### Changes
