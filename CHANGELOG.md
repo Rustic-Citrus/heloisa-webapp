@@ -1,5 +1,11 @@
 # Changelog
 
+## v.1.2.1
+
+### Changes
+
+- Changed colours.
+
 ## v.1.2.0
 
 ### Changes
