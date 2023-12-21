@@ -128,7 +128,7 @@
             <label for="last-name">Last Name: </label>
             <input id="last-name" name="lastName" type="text" placeholder="Doe" required>
             <label for="email-address">Email: </label>
-            <input type="email" name="email" placeholder="random@gmail.com" required>
+            <input type="email" name="email" placeholder="janedoe@gmail.com" required>
             <label for="message-text">Message: </label>
             <textarea id="message-text" name="message" cols="10" rows="5" placeholder="Hello Heloísa, ..."></textarea>
             <button id="send-button" type="submit" value="submit">Send</button>
@@ -249,14 +249,12 @@
     form.addEventListener("submit", function(event) {
       event.preventDefault();
       const formData = new FormData(form);
-
       fetch("https://heloisahaab-mailersend-trigger.azurewebsites.net/api/mailersend_trigger?code=HtBkbPg7ksp1CXcM-zctGtvP8TrThUjh4LQg8scxtJ8rAzFul28t0w==", {
         method: "POST",
         mode: "cors",
         name: `${formData.get("firstName")} ${formData.get("lastName")}`,
         email: formData.get("email"),
-        message: formData.get("message"),
-        user: "heloisa"
+        message: formData.get("message")
       })
 
       this.classList.add("disappear");
